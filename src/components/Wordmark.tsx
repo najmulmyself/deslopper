@@ -55,7 +55,7 @@ export function Wordmark() {
       <div
         className={`${word} transition-opacity duration-300 ease-out`}
         aria-hidden="true"
-        style={{ filter: "drop-shadow(0 0 22px rgb(168 85 247 / 0.45))", opacity: done ? 0 : 1 }}
+        style={{ filter: "drop-shadow(0 0 22px color-mix(in srgb, var(--color-slop-violet) 45%, transparent))", opacity: done ? 0 : 1 }}
       >
         <span className="slop-text">deslopper</span>
         <span className={`${slot} text-[0.5em]`}>✨</span>

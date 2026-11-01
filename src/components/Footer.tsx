@@ -12,7 +12,7 @@ export function Footer() {
           </h2>
           <a
             href={site.bookingUrl}
-            className="group flex h-12 w-fit shrink-0 items-center gap-2 rounded-[10px] bg-ink px-5 text-[15px] font-medium text-paper transition-colors duration-150 hover:bg-[#35302a]"
+            className="group flex h-12 w-fit shrink-0 items-center gap-2 rounded-[10px] bg-ink px-5 text-[15px] font-medium text-paper transition-colors duration-150 hover:bg-ink-hover"
           >
             Send your screens
             <ArrowRight size={16} strokeWidth={1.5} className="transition-transform duration-150 ease-out group-hover:translate-x-0.5" />

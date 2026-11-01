@@ -20,17 +20,17 @@ export function Pricing() {
           >
             <div className="flex items-baseline justify-between">
               <h3 className="text-[17px] font-medium">{p.name}</h3>
-              <span className={`font-mono text-[12px] ${p.featured ? "text-[#c9c0b3]" : "text-ink-3"}`}>
+              <span className={`font-mono text-[12px] ${p.featured ? "text-on-ink-3" : "text-ink-3"}`}>
                 {p.turnaround}
               </span>
             </div>
             <p className="mt-6 flex items-baseline gap-1">
               <span className="text-[40px] leading-none font-medium tracking-[-0.02em] tabular-nums">{p.price}</span>
               {p.cadence && (
-                <span className={`text-[15px] ${p.featured ? "text-[#c9c0b3]" : "text-ink-2"}`}>{p.cadence}</span>
+                <span className={`text-[15px] ${p.featured ? "text-on-ink-3" : "text-ink-2"}`}>{p.cadence}</span>
               )}
             </p>
-            <p className={`mt-3 text-[15px] leading-[22px] ${p.featured ? "text-[#ddd5c9]" : "text-ink-2"}`}>
+            <p className={`mt-3 text-[15px] leading-[22px] ${p.featured ? "text-on-ink-2" : "text-ink-2"}`}>
               {p.summary}
             </p>
             <ul className={`mt-6 flex-1 space-y-2.5 border-t pt-6 ${p.featured ? "border-white/10" : "border-line"}`}>
@@ -39,7 +39,7 @@ export function Pricing() {
                   <Check
                     size={16}
                     strokeWidth={1.5}
-                    className={`mt-0.5 shrink-0 ${p.featured ? "text-[#a89e90]" : "text-ink-3"}`}
+                    className={`mt-0.5 shrink-0 ${p.featured ? "text-on-ink-mark" : "text-ink-3"}`}
                   />
                   {f}
                 </li>

@@ -85,7 +85,7 @@ export function Compare({ before, after, label, settle = 64, className = "" }: P
       </div>
       <div
         ref={frame}
-        className="relative h-[612px] w-[300px] touch-pan-y select-none rounded-[48px] bg-ink p-[10px] shadow-[0_24px_48px_-16px_rgb(31_27_22/0.35),0_2px_4px_rgb(31_27_22/0.12)]"
+        className="relative h-[612px] w-[300px] touch-pan-y select-none rounded-[48px] bg-ink p-[10px] shadow-phone"
         onPointerDown={(e) => {
           dragging.current = true;
           cancelAnimationFrame(raf.current);
@@ -123,7 +123,7 @@ export function Compare({ before, after, label, settle = 64, className = "" }: P
             aria-valuemin={0}
             aria-valuemax={100}
             aria-valuenow={Math.round(pos)}
-            className="pointer-events-auto absolute top-1/2 left-0 flex h-9 w-9 -translate-x-1/2 -translate-y-1/2 cursor-ew-resize items-center justify-center rounded-full bg-pencil text-white shadow-[0_2px_8px_rgb(31_27_22/0.25),inset_0_1px_0_rgb(255_255_255/0.18)] transition-transform duration-150 ease-out active:scale-[0.96]"
+            className="pointer-events-auto absolute top-1/2 left-0 flex h-9 w-9 -translate-x-1/2 -translate-y-1/2 cursor-ew-resize items-center justify-center rounded-full bg-pencil text-white shadow-pencil transition-transform duration-150 ease-out active:scale-[0.96]"
             onKeyDown={(e) => {
               if (e.key === "ArrowLeft") setPos((p) => Math.max(0, p - 5));
               if (e.key === "ArrowRight") setPos((p) => Math.min(100, p + 5));

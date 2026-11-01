@@ -7,6 +7,12 @@
   World      an editor's proof desk: warm paper, ink, red pencil
   Moment     the before/after phone that the red line wipes clean
   Signature  red proof marks and margin notes, used only where something was fixed
+
+  Hallmark waivers, on the record
+  2a 19 30a 48 67  slop inside src/components/screens/*, the Tells examples and the
+                   Wordmark's opening layer is the demonstration, not the design
+  64               mono meta labels are the proof-desk signature
+  58               the 8-word headline stays; the joke needs both halves
 */
 
 @theme {
@@ -20,12 +26,30 @@
   --color-line-strong: rgb(31 27 22 / 0.16);
   --color-pencil: #c4352a;
   --color-pencil-deep: #a82c22;
+  --color-pencil-wash: rgb(196 53 42 / 0.16);
+  --color-ink-hover: #35302a;
+  /* text on the ink-filled pricing card */
+  --color-on-ink-2: #ddd5c9;
+  --color-on-ink-3: #c9c0b3;
+  --color-on-ink-mark: #a89e90;
+  /* slop, used only inside the before demos */
+  --color-slop-violet: #a855f7;
+  --color-slop-indigo: #6366f1;
+  --color-slop-cyan: #22d3ee;
+
+  --shadow-phone: 0 24px 48px -16px rgb(31 27 22 / 0.35), 0 2px 4px rgb(31 27 22 / 0.12);
+  --shadow-pencil: 0 2px 8px rgb(31 27 22 / 0.25), inset 0 1px 0 rgb(255 255 255 / 0.18);
 
   --font-sans: var(--font-instrument-sans), ui-sans-serif, system-ui, sans-serif;
   --font-serif: var(--font-instrument-serif), ui-serif, Georgia, serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html,
+body {
+  overflow-x: clip;
 }
 
 html {
@@ -42,7 +66,7 @@ body {
 }
 
 ::selection {
-  background: rgb(196 53 42 / 0.16);
+  background: var(--color-pencil-wash);
 }
 
 :focus-visible {
@@ -106,7 +130,7 @@ body {
 
 /* Slop styles, used only inside "before" demos */
 .slop-text {
-  background: linear-gradient(92deg, #a855f7, #6366f1 45%, #22d3ee);
+  background: linear-gradient(92deg, var(--color-slop-violet), var(--color-slop-indigo) 45%, var(--color-slop-cyan));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;

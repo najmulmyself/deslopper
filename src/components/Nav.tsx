@@ -29,7 +29,7 @@ export function Nav() {
           </ul>
           <a
             href={site.bookingUrl}
-            className="flex h-9 items-center rounded-[10px] bg-ink px-4 text-[14px] font-medium text-paper transition-colors duration-150 hover:bg-[#35302a]"
+            className="flex h-9 items-center rounded-[10px] bg-ink px-4 text-[14px] font-medium text-paper transition-colors duration-150 hover:bg-ink-hover"
           >
             Send your screens
           </a>

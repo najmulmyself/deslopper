@@ -26,13 +26,12 @@ export function Hero() {
             className="rise mt-6 max-w-[34rem] text-[18px] leading-[28px] text-ink-2 sm:text-[19px] sm:leading-[30px]"
             style={{ ["--d" as string]: "120ms" }}
           >
-            Send us the screens. We redline every AI tell, redesign the app around what it actually does and hand
-            back Figma files and SwiftUI code you can merge.
+            We redline every AI tell and hand back Figma and SwiftUI
           </p>
           <div className="rise mt-8 flex flex-wrap items-center gap-3" style={{ ["--d" as string]: "180ms" }}>
             <a
               href={site.bookingUrl}
-              className="group flex h-12 items-center gap-2 rounded-[10px] bg-ink px-5 text-[15px] font-medium text-paper transition-colors duration-150 hover:bg-[#35302a]"
+              className="group flex h-12 items-center gap-2 rounded-[10px] bg-ink px-5 text-[15px] font-medium text-paper transition-colors duration-150 hover:bg-ink-hover"
             >
               Send your screens
               <ArrowRight size={16} strokeWidth={1.5} className="transition-transform duration-150 ease-out group-hover:translate-x-0.5" />
