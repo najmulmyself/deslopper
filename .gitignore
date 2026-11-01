@@ -43,3 +43,4 @@ node_modules/
 .reanimate/
 unslop/
 .DS_Store
+.hallmark/
