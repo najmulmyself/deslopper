@@ -46,9 +46,15 @@ export function Work() {
         {cases.map((c, i) => (
           <article
             key={c.name}
-            className={`grid items-center gap-10 lg:grid-cols-2 lg:gap-16 ${i % 2 ? "lg:[&>*:first-child]:order-2" : ""}`}
+            className={`grid items-center gap-10 lg:grid-cols-2 lg:gap-24 ${i % 2 ? "lg:[&>*:first-child]:order-2" : ""}`}
           >
-            <Compare label={c.name} before={c.before} after={c.after} settle={62} />
+            <Compare
+              label={c.name}
+              before={c.before}
+              after={c.after}
+              settle={62}
+              className={i % 2 ? "lg:items-start" : "lg:items-end"}
+            />
             <div className="max-w-[480px]">
               <p className="font-mono text-[12px] leading-4 text-ink-3">
                 {String(i + 1).padStart(2, "0")} · {c.kind}
@@ -58,7 +64,7 @@ export function Work() {
               <ul className="mt-8 border-t border-line">
                 {c.changes.map((ch) => (
                   <li key={ch} className="flex gap-3 border-b border-line py-3 text-[15px] leading-[22px]">
-                    <span className="mt-[9px] h-px w-3 shrink-0 bg-pencil" />
+                    <span className="mt-[11px] h-px w-3 shrink-0 bg-pencil" />
                     {ch}
                   </li>
                 ))}

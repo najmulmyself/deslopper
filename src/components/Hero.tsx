@@ -15,7 +15,7 @@ export function Hero() {
     <section id="top" className="mx-auto max-w-[1200px] px-4 pt-12 pb-20 sm:px-8 md:pt-16 lg:pb-28">
       <div className="grid items-center gap-12 lg:grid-cols-[1fr_520px] lg:gap-8">
         <div className="max-w-[560px]">
-          <p className="rise font-mono text-[12px] leading-4 text-pencil">For founders who shipped with Cursor, Claude Code and friends</p>
+          <p className="rise font-mono text-[12px] leading-4 text-ink-3">For founders who shipped with Cursor, Claude Code and friends</p>
           <h1
             className="rise mt-5 font-serif text-[44px] leading-[1.02] tracking-[-0.01em] text-balance text-ink sm:text-[64px] lg:text-[60px] xl:text-[76px]"
             style={{ ["--d" as string]: "60ms" }}
@@ -35,7 +35,7 @@ export function Hero() {
               className="group flex h-12 items-center gap-2 rounded-[10px] bg-ink px-5 text-[15px] font-medium text-paper transition-colors duration-150 hover:bg-[#35302a]"
             >
               Send your screens
-              <ArrowRight size={16} strokeWidth={1.75} className="transition-transform duration-150 ease-out group-hover:translate-x-0.5" />
+              <ArrowRight size={16} strokeWidth={1.5} className="transition-transform duration-150 ease-out group-hover:translate-x-0.5" />
             </a>
             <a
               href="#pricing"

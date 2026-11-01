@@ -38,8 +38,8 @@ export function Pricing() {
                 <li key={f} className="flex gap-2.5 text-[14px] leading-[20px]">
                   <Check
                     size={16}
-                    strokeWidth={1.75}
-                    className={`mt-0.5 shrink-0 ${p.featured ? "text-[#e88a7f]" : "text-pencil"}`}
+                    strokeWidth={1.5}
+                    className={`mt-0.5 shrink-0 ${p.featured ? "text-[#a89e90]" : "text-ink-3"}`}
                   />
                   {f}
                 </li>

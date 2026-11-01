@@ -1,7 +1,8 @@
 import { Logo } from "./Logo";
+import { MobileMenu } from "./MobileMenu";
 import { site } from "@/lib/site";
 
-const links = [
+export const navLinks = [
   ["Work", "#work"],
   ["Process", "#process"],
   ["Pricing", "#pricing"],
@@ -10,12 +11,12 @@ const links = [
 
 export function Nav() {
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-paper/90 backdrop-blur-md">
-      <nav className="mx-auto flex h-16 max-w-[1200px] items-center justify-between px-4 sm:px-8">
+    <header className="sticky top-0 z-50 border-b border-line bg-paper">
+      <nav className="relative mx-auto flex h-16 max-w-[1200px] items-center justify-between px-4 sm:px-8">
         <Logo />
         <div className="flex items-center gap-1">
           <ul className="mr-3 hidden items-center gap-1 md:flex">
-            {links.map(([label, href]) => (
+            {navLinks.map(([label, href]) => (
               <li key={href}>
                 <a
                   href={href}
@@ -32,6 +33,7 @@ export function Nav() {
           >
             Send your screens
           </a>
+          <MobileMenu links={navLinks} />
         </div>
       </nav>
     </header>

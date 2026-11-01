@@ -35,7 +35,7 @@ export function Process() {
         <ol className="mt-14 grid gap-10 md:grid-cols-3 md:gap-8">
           {steps.map((s) => (
             <li key={s.n} className="border-t border-line-strong pt-5">
-              <p className="font-mono text-[12px] leading-4 text-pencil">{s.n}</p>
+              <p className="font-mono text-[12px] leading-4 text-ink-3">{s.n}</p>
               <h3 className="mt-3 text-[20px] leading-7 font-medium">{s.title}</h3>
               <p className="mt-2 text-[15px] leading-[24px] text-ink-2">{s.body}</p>
             </li>
@@ -52,7 +52,7 @@ export function Process() {
           <ul className="grid gap-px overflow-hidden rounded-[16px] border border-line bg-line sm:grid-cols-2">
             {box.map(({ i: Icon, t, d }) => (
               <li key={t} className="flex gap-3 bg-paper p-5">
-                <Icon size={18} strokeWidth={1.5} className="mt-0.5 shrink-0 text-ink-3" />
+                <Icon size={16} strokeWidth={1.5} className="mt-[3px] shrink-0 text-ink-3" />
                 <div>
                   <p className="text-[15px] leading-[22px] font-medium">{t}</p>
                   <p className="mt-0.5 text-[14px] leading-[20px] text-ink-2">{d}</p>

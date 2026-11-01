@@ -48,7 +48,7 @@ export function Tells() {
   return (
     <section className="border-t border-line bg-card">
       <div className="mx-auto grid max-w-[1200px] gap-12 px-4 py-20 sm:px-8 lg:grid-cols-[360px_1fr] lg:gap-16 lg:py-28">
-        <div>
+        <div className="lg:sticky lg:top-28 lg:self-start">
           <h2 className="font-serif text-[40px] leading-[1.05] tracking-[-0.01em] text-balance sm:text-[48px]">
             Everyone can tell. Here&apos;s how
           </h2>

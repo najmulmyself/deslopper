@@ -9,6 +9,7 @@ type Props = {
   label: string;
   /** Where the red line settles after the opening wipe, in percent */
   settle?: number;
+  className?: string;
 };
 
 const ease = (t: number) => 1 - Math.pow(1 - t, 4);
@@ -17,7 +18,7 @@ const ease = (t: number) => 1 - Math.pow(1 - t, 4);
  * A phone with two screens stacked. The red pencil line wipes the slop away:
  * left of the line is what we hand back, right of it is what the client sent.
  */
-export function Compare({ before, after, label, settle = 64 }: Props) {
+export function Compare({ before, after, label, settle = 64, className = "" }: Props) {
   const [pos, setPos] = useState(0);
   const frame = useRef<HTMLDivElement>(null);
   const dragging = useRef(false);
@@ -77,7 +78,7 @@ export function Compare({ before, after, label, settle = 64 }: Props) {
   };
 
   return (
-    <div className="flex flex-col items-center gap-3">
+    <div className={`flex flex-col items-center gap-3 ${className}`}>
       <div className="flex w-[300px] justify-between font-mono text-[12px] leading-4 text-ink-3">
         <span>After</span>
         <span>Before</span>
@@ -128,7 +129,7 @@ export function Compare({ before, after, label, settle = 64 }: Props) {
               if (e.key === "ArrowRight") setPos((p) => Math.min(100, p + 5));
             }}
           >
-            <ChevronsLeftRight size={16} strokeWidth={1.75} />
+            <ChevronsLeftRight size={16} strokeWidth={1.5} />
           </button>
         </div>
       </div>

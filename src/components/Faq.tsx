@@ -31,14 +31,14 @@ export function Faq() {
   return (
     <section id="faq" className="border-t border-line bg-card">
       <div className="mx-auto grid max-w-[1200px] gap-10 px-4 py-20 sm:px-8 lg:grid-cols-[360px_1fr] lg:gap-16 lg:py-28">
-        <h2 className="font-serif text-[40px] leading-[1.05] tracking-[-0.01em] text-balance sm:text-[48px]">Questions</h2>
+        <h2 className="font-serif lg:sticky lg:top-28 lg:self-start text-[40px] leading-[1.05] tracking-[-0.01em] text-balance sm:text-[48px]">Questions</h2>
         <div className="border-t border-line">
           {faqs.map((f) => (
             <details key={f.q} className="group border-b border-line">
               <summary className="flex min-h-16 cursor-pointer list-none items-center justify-between gap-6 py-4 text-[17px] leading-[24px] font-medium [&::-webkit-details-marker]:hidden">
                 {f.q}
                 <Plus
-                  size={18}
+                  size={16}
                   strokeWidth={1.5}
                   className="shrink-0 text-ink-3 transition-transform duration-200 ease-out group-open:rotate-45"
                 />

@@ -3,7 +3,7 @@
 import { useEffect, useRef, useState } from "react";
 import { LogoMark } from "./Logo";
 
-const ease = (t: number) => (t < 0.5 ? 4 * t * t * t : 1 - Math.pow(-2 * t + 2, 3) / 2);
+const ease = (t: number) => 1 - Math.pow(1 - t, 4);
 
 /**
  * The brand moment: the name arrives as slop (gradient, glow, sparkle) and the
