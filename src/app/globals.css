@@ -1,0 +1,129 @@
+@import "tailwindcss";
+
+/*
+  Direction
+  Product    A studio that redesigns vibecoded iOS apps and sites so they stop looking AI-made
+  Character  exact, dry, a little cheeky
+  World      an editor's proof desk: warm paper, ink, red pencil
+  Moment     the before/after phone that the red line wipes clean
+  Signature  red proof marks and margin notes, used only where something was fixed
+*/
+
+@theme {
+  --color-paper: #f7f4ee;
+  --color-card: #fdfbf7;
+  --color-raised: #efe9df;
+  --color-ink: #1f1b16;
+  --color-ink-2: #5e554a;
+  --color-ink-3: #736a5e;
+  --color-line: rgb(31 27 22 / 0.09);
+  --color-line-strong: rgb(31 27 22 / 0.16);
+  --color-pencil: #c4352a;
+  --color-pencil-deep: #a82c22;
+
+  --font-sans: var(--font-instrument-sans), ui-sans-serif, system-ui, sans-serif;
+  --font-serif: var(--font-instrument-serif), ui-serif, Georgia, serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+
+  --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-feature-settings: "ss01";
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: rgb(196 53 42 / 0.16);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-pencil);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
+/* Red pencil strike that draws itself when its parent gets .is-in */
+.strike {
+  position: relative;
+}
+.strike::after {
+  content: "";
+  position: absolute;
+  left: -2px;
+  right: -2px;
+  top: 52%;
+  height: 2px;
+  background: var(--color-pencil);
+  border-radius: 2px;
+  transform: scaleX(0) rotate(-2deg);
+  transform-origin: left center;
+  transition: transform 420ms var(--ease-out);
+  transition-delay: var(--d, 0ms);
+}
+.is-in .strike::after {
+  transform: scaleX(1) rotate(-2deg);
+}
+
+/* Logo mark: the slash redraws on hover */
+.logo-slash {
+  stroke-dasharray: 24;
+  stroke-dashoffset: 0;
+  transition: stroke-dashoffset 360ms var(--ease-out);
+}
+.logo:hover .logo-slash {
+  animation: redraw 520ms var(--ease-out);
+}
+@keyframes redraw {
+  from {
+    stroke-dashoffset: 24;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.rise {
+  opacity: 0;
+  transform: translateY(8px);
+  animation: rise 480ms var(--ease-out) forwards;
+  animation-delay: var(--d, 0ms);
+}
+@keyframes rise {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Slop styles, used only inside "before" demos */
+.slop-text {
+  background: linear-gradient(92deg, #a855f7, #6366f1 45%, #22d3ee);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .rise {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+  .strike::after,
+  .logo-slash {
+    transition: none;
+    animation: none;
+  }
+}
