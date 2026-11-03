@@ -7,11 +7,11 @@ const faqs = [
   },
   {
     q: "Will you change what my app does?",
-    a: "No. Features, content and the order of screens stay. We change how it looks and reads. Bigger product ideas go into the redline as suggestions, never into the build.",
+    a: "No. The agreed scope stays intact. We can reorganise information to make a task clearer, and explain those changes before implementation. Bigger product ideas go into the redline as suggestions, never into the build.",
   },
   {
     q: "My app has a brand already. Will you replace it?",
-    a: "A real logo, colour or typeface stays and the redesign is built around it. A purple-to-blue gradient and a sparkle icon are usually not a brand, and we'll say so.",
+    a: "We build on your existing identity. Colour, illustration and playful details can all belong; we’ll discuss changes in terms of your audience and what the product needs.",
   },
   {
     q: "Is this just another AI doing the redesign?",
@@ -30,7 +30,7 @@ const faqs = [
 export function Faq() {
   return (
     <section id="faq" className="border-t border-line bg-card">
-      <div className="mx-auto grid max-w-[1200px] gap-10 px-4 py-20 sm:px-8 lg:grid-cols-[360px_1fr] lg:gap-16 lg:py-28">
+      <div className="mx-auto grid max-w-[1200px] gap-10 px-4 py-10 sm:px-8 lg:grid-cols-[360px_1fr] lg:gap-16 lg:py-20">
         <h2 className="font-serif lg:sticky lg:top-28 lg:self-start text-[40px] leading-[1.05] tracking-[-0.01em] text-balance sm:text-[48px]">Questions</h2>
         <div className="border-t border-line">
           {faqs.map((f) => (

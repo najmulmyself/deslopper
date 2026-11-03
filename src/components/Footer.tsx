@@ -5,7 +5,7 @@ import { site } from "@/lib/site";
 export function Footer() {
   return (
     <footer className="border-t border-line">
-      <div className="mx-auto max-w-[1200px] px-4 pt-20 sm:px-8 lg:pt-28">
+      <div className="mx-auto max-w-[1200px] px-4 pt-10 sm:px-8 lg:pt-20">
         <div className="flex flex-col gap-8 md:flex-row md:items-end md:justify-between">
           <h2 className="max-w-[560px] font-serif text-[40px] leading-[1.05] tracking-[-0.01em] text-balance sm:text-[56px]">
             Send us the screen you&apos;re least proud of
@@ -19,7 +19,7 @@ export function Footer() {
           </a>
         </div>
 
-        <div className="mt-20 overflow-hidden pt-4 pb-10 lg:mt-28">
+        <div className="mt-12 overflow-hidden pt-4 pb-10 lg:mt-16">
           <Wordmark />
         </div>
 

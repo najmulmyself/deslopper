@@ -6,7 +6,7 @@ export const navLinks = [
   ["Work", "#work"],
   ["Process", "#process"],
   ["Pricing", "#pricing"],
-  ["FAQ", "#faq"],
+  ["Studio", "#about"],
 ] as const;
 
 export function Nav() {
