@@ -3,6 +3,7 @@
 
 export const site = {
   name: "Deslopper",
+  designer: { name: "najmulmyself", url: "https://najmulmyself.com" },
   domain: "deslopper.com",
   email: "hello@deslopper.com",
   // Swap for a Cal.com or Calendly link when you have one.

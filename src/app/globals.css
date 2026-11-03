@@ -5,12 +5,11 @@
   Product    A studio that redesigns vibecoded iOS apps and sites so they stop looking AI-made
   Character  exact, dry, a little cheeky
   World      an editor's proof desk: warm paper, ink, red pencil
-  Moment     the before/after phone that the red line wipes clean
+  Moment     finished work with an inspectable redline
   Signature  red proof marks and margin notes, used only where something was fixed
 
   Hallmark waivers, on the record
-  2a 19 30a 48 67  slop inside src/components/screens/*, the Tells examples and the
-                   Wordmark's opening layer is the demonstration, not the design
+  2a 19 30a 48 67  original screen concepts are demonstrations, not the studio identity
   64               mono meta labels are the proof-desk signature
   58               the 8-word headline stays; the joke needs both halves
 */
@@ -40,16 +39,11 @@
   --shadow-phone: 0 24px 48px -16px rgb(31 27 22 / 0.35), 0 2px 4px rgb(31 27 22 / 0.12);
   --shadow-pencil: 0 2px 8px rgb(31 27 22 / 0.25), inset 0 1px 0 rgb(255 255 255 / 0.18);
 
-  --font-sans: var(--font-instrument-sans), ui-sans-serif, system-ui, sans-serif;
-  --font-serif: var(--font-instrument-serif), ui-serif, Georgia, serif;
-  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+  --font-sans: "Instrument Sans Variable", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Instrument Serif", ui-serif, Georgia, serif;
+  --font-mono: "Geist Mono Variable", ui-monospace, monospace;
 
   --ease-out: cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-html,
-body {
-  overflow-x: clip;
 }
 
 html {
@@ -151,3 +145,6 @@ body {
     animation: none;
   }
 }
+
+.eyebrow { font-family: var(--font-mono); font-size: 11px; line-height: 1.6; letter-spacing: 0.04em; color: var(--color-ink-3); }
+.section-title { font-family: var(--font-serif); font-size: clamp(36px, 4vw, 48px); line-height: 1.08; letter-spacing: -0.02em; text-wrap: balance; }

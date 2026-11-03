@@ -7,24 +7,24 @@ Next.js 16 (App Router) + Tailwind CSS 4, fully static.
 ## Run it
 
 ```bash
-npm install
+npm ci
 npm run dev      # http://localhost:3000
 npm run build && npm start
 ```
 
 ## Edit content
 
-- Prices, turnaround, email and booking link: `src/lib/site.ts`
-- Sections: `src/components/` (`Hero`, `Tells`, `Work`, `Process`, `Pricing`, `Faq`, `Footer`)
+- Prices, turnaround, designer profile, email and booking link: `src/lib/site.ts`
+- Sections: `src/components/` (`Hero`, `Work`, `Redline`, `Pricing`, `Process`, `About`, `Faq`, `Footer`)
 - Before/after phone screens: `src/components/screens/`
 - Colours and fonts: `src/app/globals.css` (`@theme` block) and `src/app/layout.tsx`
 
 ## Brand
 
 - Mark: the AI sparkle, struck out with a red pencil (`src/components/Logo.tsx`, favicon in `src/app/icon.svg`)
-- Footer wordmark: arrives as slop (gradient, glow, ✨) and the red pencil wipes it clean when it scrolls into view (`src/components/Wordmark.tsx`)
+- Footer wordmark: clean ink, visible immediately without JavaScript (`src/components/Wordmark.tsx`)
 - Signature: red proof marks and margin notes, only where something was fixed
-- Type: Instrument Serif for headlines, Instrument Sans for everything else, Geist Mono for meta
+- Type: Instrument Serif for headlines, Instrument Sans for everything else, Geist Mono for meta. All three are self-hosted through pinned Fontsource packages; builds do not fetch Google Fonts
 
 ## Deploy
 
@@ -34,3 +34,7 @@ npm run build && npm start
 ## Skills
 
 `.claude/skills/` vendors [unslop](https://github.com/heydamir/unslop) and [reanimate](https://github.com/NiazMorshed2007/reanimate). See `.claude/skills/README.md`.
+
+## Validation
+
+Run `npm run build` and `npx eslint src`. The root lint command also includes vendored `.claude/skills` tooling with existing lint errors. Check the comparison controls, sample redline disclosure, mobile navigation, and page width at 320px, 390px, 768px and 1440px. Concept work is labeled and does not represent client results.

@@ -1,23 +1,9 @@
 import type { Metadata, Viewport } from "next";
-import { Instrument_Sans, Instrument_Serif, Geist_Mono } from "next/font/google";
+import "@fontsource-variable/instrument-sans";
+import "@fontsource/instrument-serif/latin-400.css";
+import "@fontsource-variable/geist-mono";
 import { site } from "@/lib/site";
 import "./globals.css";
-
-const sans = Instrument_Sans({
-  variable: "--font-instrument-sans",
-  subsets: ["latin"],
-});
-
-const serif = Instrument_Serif({
-  variable: "--font-instrument-serif",
-  subsets: ["latin"],
-  weight: "400",
-});
-
-const mono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
 
 export const metadata: Metadata = {
   metadataBase: new URL(`https://${site.domain}`),
@@ -28,7 +14,11 @@ export const metadata: Metadata = {
     description: site.description,
     type: "website",
   },
-  twitter: { card: "summary_large_image", title: "Deslopper", description: site.description },
+  twitter: {
+    card: "summary_large_image",
+    title: "Deslopper",
+    description: site.description,
+  },
 };
 
 export const viewport: Viewport = {
@@ -37,7 +27,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: LayoutProps<"/">) {
   return (
-    <html lang="en" className={`${sans.variable} ${serif.variable} ${mono.variable} antialiased`}>
+    <html lang="en" className="antialiased">
       <body className="min-h-dvh">{children}</body>
     </html>
   );
